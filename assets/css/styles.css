@@ -1,0 +1,29 @@
+/* Define print-only styles */
+@media print {
+    /* Hide all elements except the print-area container */
+    body .container * {
+        display: none;
+    }
+
+    #print-area, #print-area * {
+        display: block;
+    }
+
+    i.bi, button {
+        display: none !important;
+    }
+}
+
+.list-group-item.dragging {
+    background-color: #f5f5f5;
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.bi-arrow-down-up {
+    color: #ccc;
+}
+
+iframe {
+    border-radius: 6px;
+}
