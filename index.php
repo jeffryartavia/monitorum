@@ -130,6 +130,8 @@
 </div>
 
 <script>
+    var spaceMarineFactions = ["BLACK TEMPLARS", "BLOOD ANGELS", "DARK ANGLES", "DEATHWATCH", "GRAY KNIGHTS", "SPACE MARINES", "SPACE WOLVES"];
+
     var factionSelect = document.getElementById("faction");
     var selectedFaction = factionSelect.value;
 
@@ -159,7 +161,6 @@
 
         changeFactionTitle();
     };
-
     fetchFactionsData();
 
     const fetchUnitsByFactionName = async (factionName) => {
@@ -173,7 +174,7 @@
 
         imageSearchLink();
         changeFactionTitle();
-        document.getElementById("nodeList").innerHTML = "";
+        //document.getElementById("nodeList").innerHTML = "";
         document.getElementById("unitSizeArea").innerHTML = "";
         fetchUnitSizesByUnitName();
     };
@@ -241,16 +242,18 @@
 
 <script>
     function changeFactionTitle() {
-        factionSelect = document.getElementById("faction");
-        selectedFaction = factionSelect.value;
 
-        unitSelect = document.getElementById("unit");
-        selectedUnit = unitSelect.value;
+            factionSelect = document.getElementById("faction");
+            selectedFaction = factionSelect.value;
 
-        document.getElementById("factionTitle").innerHTML = selectedFaction;
+            unitSelect = document.getElementById("unit");
+            selectedUnit = unitSelect.value;
 
-        totalPoints = 0;
-        document.getElementById("totalPoints").textContent = "Total Points: " + totalPoints;
+            //document.getElementById("factionTitle").innerHTML = selectedFaction;
+
+            //totalPoints = 0;
+            document.getElementById("totalPoints").textContent = "Total Points: " + totalPoints;
+
     }
 </script>
 
